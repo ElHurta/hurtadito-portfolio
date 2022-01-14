@@ -1,11 +1,14 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import "../sass/main.sass"
 // import { StaticImage } from "gatsby-plugin-image"
 // import Seo from "../components/Seo"
 
+import { Hero } from "../components/Hero"
+
 const IndexPage = () => (
   <React.Fragment>
-    <Link to='/page-2'>Hola</Link>
+    <Hero />
   </React.Fragment>
 )
 
