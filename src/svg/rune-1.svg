@@ -1,0 +1,29 @@
+<svg id="rune-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.34 134.36">
+    <defs>
+        <style>
+            .rune1-cls-1 {
+                fill: #d6e2af;
+            }
+
+            .cls-2,
+            .cls-3 {
+                fill: none;
+                stroke: #d6e2af;
+                stroke-miterlimit: 10;
+            }
+
+            .cls-2 {
+                stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <g id="Objects">
+        <g id="_01" data-name="01">
+            <path class="rune1-cls-1"
+                d="M66.51,1.52l55.64,95H10.86l55.65-95M69.09,0H63.92L8.27,95l2.59,4.51H122.15L124.74,95,69.09,0Z" />
+            <path class="rune1-cls-1"
+                d="M122.15,36.51h0m0,0-55.64,95-55.65-95H122.15m0-3H10.86L8.27,38l55.65,95h5.17l55.65-95-2.58-4.5Zm0,6h0Z" />
+            <path class="cls-2" d="M132.84,67.19A65.67,65.67,0,1,1,67.17,1.52,65.67,65.67,0,0,1,132.84,67.19Z" />
+        </g>
+    </g>
+</svg>

@@ -9,6 +9,7 @@ import { Hero } from "../components/Hero"
 const IndexPage = () => (
   <React.Fragment>
     <Hero />
+    <section/>
   </React.Fragment>
 )
 

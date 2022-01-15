@@ -5,8 +5,8 @@ function Navbar() {
         <nav>
             <ul>
                 <li className='item_name'> <a href='/'> Juan Hurtado  </a> </li>
-                <li> <a href='/'> Contacto </a> </li>
-                <li> <a href='/'> Inicio </a> </li>
+                <li> <a href='/'> Contact </a> </li>
+                <li> <a href='/'> Home </a> </li>
             </ul>
         </nav>
     )

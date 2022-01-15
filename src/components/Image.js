@@ -5,10 +5,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const Image = () => {
   const data = useStaticQuery(graphql`
     query GET_IMAGE {
-      image: file(relativePath: {eq: "cutted-profile.png"}){
+      image: file(relativePath: {eq: "hurta-crop.png"}){
 
       childImageSharp {
-          gatsbyImageData(width: 300)
+          gatsbyImageData(width: 180, layout: CONSTRAINED, quality: 90)
         }
       }
     }
