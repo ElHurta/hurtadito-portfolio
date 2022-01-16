@@ -2,19 +2,27 @@
 $base-color: #FF6565
 $white: #FFFFFF
 $background-base-color: #19092B
+$background-base-color-variation: #160327
 
 // Imports
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap')
 @font-face
     font-family: JetBrainsMonoExtraBold
     src: url('../fonts/JetBrainsMonoExtraBoldNerdFontCompleteMono.ttf')
+
+
   
 
 *
     box-sizing: border-box
+    scroll-behavior: smooth
+
 
 body
-    background: $background-base-color
+    background: url(../svg/rotated-rune-1.svg)
+    background-size: 150px
+    background-repeat: space
+    background-color: $background-base-color
 
 section
     height: 100vh

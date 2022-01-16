@@ -1,16 +1,6 @@
 @import "main.sass"
 
-.gradial-div
-    position: absolute
-    height: 60%
-    width: 80%
-    top: 15%
-    background: rgb(37,21,114)
-    background: radial-gradient(circle, rgba(37,21,114,1) 0%, rgba(25,9,43,0.92) 20%)
-    text-align: center
-
-
-#above-star, #below-star
+#above-star, #below-star, #dashed-circle-1, #rune-1, .photo-container
     overflow: visible
     position: absolute
     top: 15%
@@ -20,24 +10,13 @@
     animation: rotation 15s infinite linear
 
 #dashed-circle-1
-    overflow: visible
-    position: absolute
-    top: 15%
-    height: 60%
-    width: 80%
-    padding: 11rem
-    opacity: 0.8
+    padding: 14rem
     fill: #c54c4c
     filter: drop-shadow(2px 2px 5px rgb(252, 11, 91))
     animation: rotation-inverse 20s infinite linear
 
 #rune-1
-    overflow: visible
-    position: absolute
-    top: 15%
-    height: 60%
-    width: 80%
-    animation: rotation 30s infinite linear    
+    animation: rotation-inverse 30s infinite linear    
 
     .rune1-cls-1
         fill: #952bf8
@@ -50,15 +29,13 @@
 
 .profile-photo
     border-radius: 50%
+    filter: drop-shadow(0px 0px 80px rgb(184, 62, 255))
     
 .photo-container
-    position: absolute
-    height: 60%
-    width: 80%
-    top: 15%
     display: flex
     justify-content: center
     align-items: center
+    animation: none
 
 .star-path
     stroke: #c54c4c !important
@@ -112,3 +89,42 @@
         margin: 0
         font-size: 1.6rem
         color: #f79d9d
+
+
+
+.call-to-action-container
+    position: absolute
+    bottom: 15%
+    display: flex
+    width: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 7%
+    overflow: visible
+    cursor: pointer
+
+    #arrow-1, #arrow-2, #arrow-3
+        overflow: visible
+        filter: drop-shadow(0px 2px 2px rgba(235, 35, 35, 0.58))
+
+    #arrow-3
+        opacity: 1
+        animation: flickerAnimation 3s infinite 1s
+    
+    #arrow-2
+        opacity: 1
+        animation: flickerAnimation 3s infinite 1.5s
+
+    #arrow-1
+        opacity: 1
+        animation: flickerAnimation 3s infinite 2s
+    
+
+@keyframes flickerAnimation
+    0%
+        opacity:1
+    50%
+        opacity:0.5
+    100%
+        opacity:1

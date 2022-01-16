@@ -1,0 +1,42 @@
+<svg id="Capa_1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 168">
+    <defs>
+        <style type="text/css">
+            svg{
+                animation: rotation-inverse 80s linear;
+            }
+            path{
+                stroke: #160327 !important;
+                stroke-width: 5px !important;
+                
+            }
+            @keyframes rotation-inverse{
+                from{transform: rotate(359deg);}
+                    
+                to{transform: rotate(0deg);}
+                    
+            }
+                
+        </style>
+    </defs>
+    <g >
+        <path d="M721.88,383a33.74,33.74,0,1,1,0-47.71A33.74,33.74,0,0,1,721.88,383Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+        <path d="M664.6,399.23a33.73,33.73,0,1,1,0-47.71A33.71,33.71,0,0,1,664.6,399.23Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+        <path d="M706.32,441a33.73,33.73,0,1,1,0-47.71A33.71,33.71,0,0,1,706.32,441Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+        <path d="M689.35,374.49a33.74,33.74,0,1,1,0-47.71A33.74,33.74,0,0,1,689.35,374.49Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+        <path d="M731.07,416.2a33.73,33.73,0,1,1,0-47.71A33.73,33.73,0,0,1,731.07,416.2Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+        <path d="M674.5,430.35a33.73,33.73,0,1,1,0-47.71A33.73,33.73,0,0,1,674.5,430.35Z"
+            transform="translate(-589.98 -299.86)"
+            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px" />
+    </g>
+    <rect width="168" height="168" style="fill:none" />
+</svg>

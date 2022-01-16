@@ -1,10 +1,12 @@
 import React from 'react'
-import Star from '../svg/star.svg'
-import StarBase from '../svg/star-base.svg'
+import Star from '../svg/star.inline.svg'
+import StarBase from '../svg/star-base.inline.svg'
 import { Image } from './Image'
 
-import DashedCircle from '../svg/dashed-circle-photo.svg'
-import Rune1 from '../svg/rune-1.svg'
+import DashedCircle from '../svg/dashed-circle-photo.inline.svg'
+import Rune1 from '../svg/rune-1.inline.svg'
+
+import CallToAct from '../svg/call-to-cplt.inline.svg'
 
 import '../sass/hero.sass'
 
@@ -12,9 +14,9 @@ function Hero() {
     return (
         <section>
             <Rune1 />
-            <DashedCircle/>
             <StarBase />
             <Star />
+            <DashedCircle/>
             
             <div className='photo-container'>
                 <Image/>
@@ -28,7 +30,7 @@ function Hero() {
                 <p>The Name is Juan Hurtado, btw</p>
             </div>
 
-            {/* Call to action */}
+            <CallToAct className='call-to-action-container'/>
 
         </section>
     )
