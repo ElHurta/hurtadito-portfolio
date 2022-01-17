@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <nav key={'navbar'}>
             {/* <a className='item_name' href='/'> Juan Hurtado  </a> */}
-            <span onClick={onClickHamburger} className='hamburger-menu' key={'hamburgerSpan'}>
+            <span tabIndex={0} role={"button"} onClick={onClickHamburger} className='hamburger-menu' key={'hamburgerSpan'} onKeyDown={onClickHamburger}>
                 <Hamburger opened={opened}/>
             </span>
             <ul className={`${opened ? "open" : ""}`}>
