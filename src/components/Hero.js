@@ -12,7 +12,7 @@ import '../sass/hero.sass'
 
 function Hero() {
     return (
-        <section>
+        <section id='home'>
             <Rune1 />
             <StarBase />
             <Star />
@@ -30,7 +30,7 @@ function Hero() {
                 <p>The Name is Juan Hurtado, btw</p>
             </div>
 
-            <CallToAct className='call-to-action-container'/>
+            <a href='#icando'><CallToAct className='call-to-action-container'/></a>
 
         </section>
     )

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 // import { Link } from "gatsby"
 
 import "../sass/main.sass"
@@ -8,8 +9,11 @@ import { Position } from "../components/Position"
 
 const IndexPage = () => (
   <React.Fragment>
+    <Helmet>
+          <title>Juan Hurtado Portfolio 🤖</title>
+    </Helmet>
     <Hero />
-    <Position />
+    <Position/>
   </React.Fragment>
 )
 

@@ -36,6 +36,7 @@
     justify-content: center
     align-items: center
     animation: none
+    opacity: 1
 
 .star-path
     stroke: #c54c4c !important
@@ -130,6 +131,10 @@
         opacity:1
 
 
+@media (max-width: 1125px)
+    .call-to-action-container
+        bottom: 6%
+
 @media (max-width: 1025px)
 
     .welcome-hero
@@ -138,9 +143,6 @@
         left: 0
         p
             text-align: center
-
-    .call-to-action-container
-        bottom: 6%
 
     #above-star, #below-star, #dashed-circle-1, #rune-1, .photo-container
         width: 100%
