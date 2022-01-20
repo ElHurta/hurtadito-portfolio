@@ -2,6 +2,19 @@
 @import "hero.sass"
 
 
+:root
+    --animation-width: 5vw
+    --hidden-pos: -10vh
+    --semi-visible-pos: -20vh
+    --full-visible-pos: 0vh
+
+$animation-timing: 9s
+$carousel-items: 4
+$animation-delay-fraction: calc($animation-timing / $carousel-items)
+$animation-steps-fraction: calc(100 / $carousel-items)
+$slide-change-timing: 3
+
+
 .pos-section-container
     height: 100%
     display: flex
@@ -9,6 +22,7 @@
     align-items: center
     
 .ican-class
+    display: flex
     width: 45%
 
     h1
@@ -27,19 +41,22 @@ h1
     display: flex
     align-items: center
     justify-content: flex-start
-    width: 25%
+    width: 25rem
     left: 50%
+    animation: card-carousel-animation $animation-timing linear infinite
+
+    transform: translate(5vw, -10vh) scale(0.8)
+    opacity: 0
+    z-index: 0
+
+    will-change: transform, opacity
 
 
-.hidden
-    opacity: 0.4
-    left: 57%
-
-.below
-    margin-top: 15rem
-
-.above
-    margin-bottom: 15rem
+.cards-section
+    height: 55%
+    width: 80%
+    display: flex
+    align-items: center
 
 .pos-icon-card
     position: absolute
@@ -57,7 +74,7 @@ h1
     position: absolute
     width: 6rem
     height: 6rem
-    animation: rotation 12s infinite linear
+    animation: rotation 5s infinite linear
     z-index: 1
 
 .web-icon
@@ -70,7 +87,7 @@ h1
     background: rgb(252,39,14)
     background: linear-gradient(163deg, #d8817760 0%, #97647073 100%)
     border-radius: 1rem
-    backdrop-filter: blur(7px) brightness(100%)
+    backdrop-filter: blur(5px)
 
     border: solid 1px #ffb9b9
     -webkit-box-shadow: 3px 6px 12px 5px rgb(0 0 0 / 68%)
@@ -84,11 +101,106 @@ h1
         font-family: "DM Sans"
         font-weight: 500
 
-
     h1
         font-size: 1.8rem
+
+@for $i from 1 through $carousel-items
+  .pos-card-container:nth-child(#{$i})
+    animation-delay: calc(#{$animation-delay-fraction} * #{$i - 2})
+
+.pos-card-container:last-child
+  animation-delay: calc(-#{$animation-delay-fraction} * 2)
     
 
+@keyframes card-carousel-animation
+    0%
+        transform: translate(var(--animation-width), 50%) scale(0.8)
+        opacity: 0
+
+    #{$slide-change-timing}%,
+    #{$animation-steps-fraction}%
+        transform: translate(var(--animation-width), 100%) scale(0.8)
+        opacity: 0.5
+
+    #{$animation-steps-fraction + $slide-change-timing}%,
+    #{$animation-steps-fraction * 2}%
+        transform: translate(0vh) scale(1)
+        opacity: 1
+
+    #{($animation-steps-fraction * 2) + $slide-change-timing}%,
+    #{$animation-steps-fraction * 3}%
+        transform: translate(var(--animation-width), -100%) scale(0.8)
+        opacity: 0.5
+ 
+
+    #{($animation-steps-fraction * 3) + $slide-change-timing}%
+        transform: translate(var(--animation-width), 50%) scale(0.8)
+        opacity: 0
+
+    100%
+        transform: translate(var(--animation-width), 50%) scale(0.8)
+        opacity: 0
+        visibility: hidden
 
 
-    
+@media (max-width: 890px)
+    .pos-card-container
+        width: 20rem
+
+    .pos-section-container
+        padding: 0 4%
+
+@media (max-width: 768px) 
+
+    .pos-card-container
+        left: 20%
+        height: 15%
+
+        .int-card
+            height: 100%
+            h1
+                margin: 0.5rem 0
+                font-size: 1.3rem
+
+            ul
+                font-size: 1rem
+
+    .pos-section-container
+        flex-direction: column
+        padding: 5rem 0
+        gap: 2rem
+
+    .ican-class
+        height: 50%
+        align-items: center
+        justify-content: center
+        h1
+            margin: 0
+            font-size: 6rem
+
+@media (max-width: 425px)
+
+    .card-section
+        height: 50% 
+    .pos-card-container
+        left: 10%
+        height: 15%
+
+    .ican-class
+        height: 50%
+        align-items: center
+        justify-content: center
+        h1
+            margin: 0
+            font-size: 4rem
+            
+@media (max-width: 375px)
+
+    .pos-card-container
+        width: 17rem
+
+
+@media (max-width: 320px)
+
+    .pos-card-container
+        left: 8%

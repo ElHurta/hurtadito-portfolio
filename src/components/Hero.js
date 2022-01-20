@@ -27,7 +27,7 @@ function Hero() {
                 <h1>Hi! Welcome To <br />
                     <span> My Portfolio!</span> 
                 </h1>
-                <p>The Name is Juan Hurtado, btw</p>
+                <p>The Name is Juan Hurtado, btw 🚀</p>
             </div>
 
             <a href='#icando'><CallToAct className='call-to-action-container'/></a>
