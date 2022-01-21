@@ -30,7 +30,7 @@ function Hero() {
                 <p>The Name is Juan Hurtado, btw 🚀</p>
             </div>
 
-            <a href='#icando'><CallToAct className='call-to-action-container'/></a>
+            <a className='call-to-action-link' href='#icando'><CallToAct className='call-to-action-container'/></a>
 
         </section>
     )
