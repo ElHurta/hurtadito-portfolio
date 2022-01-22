@@ -1,9 +1,10 @@
 import React from 'react'
 
 import '../sass/position.sass'
-import {FaDesktop} from "@react-icons/all-files/fa/FaDesktop"
+
 import { useStaticQuery, graphql } from "gatsby"
 
+import { PositionIcon } from './PositionIcon'
 import DashedCircle from '../svg/dashed-circle-2.inline.svg'
 
 function Position() {
@@ -15,6 +16,7 @@ function Position() {
           data {
             id
             attributes {
+              icon_flag
               position_skill_1
               position_skill_2
               position_skill_3
@@ -27,17 +29,17 @@ function Position() {
   `)
 
     const {allStrapiPosition : {nodes: positions}} = dataQuery
-    console.log(positions[0].data)
 
     let cardsList = []
 
     positions[0].data.forEach(element => {
-            
+        console.log(element)    
         cardsList.push(
                 <div className='pos-card-container'>
                 <div className='pos-icon-card'>
+
                     <DashedCircle className='icon-border'/>
-                    <FaDesktop className='web-icon'/>
+                    <PositionIcon icon_flag={element.attributes.icon_flag} />
                 </div>
 
                 {/* Card Interna */}
