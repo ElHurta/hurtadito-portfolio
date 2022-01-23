@@ -32,28 +32,27 @@ function Position() {
 
     let cardsList = []
 
-    positions[0].data.forEach(element => {
-        console.log(element)    
+    positions[0].data.forEach(element => { 
         cardsList.push(
-                <div className='pos-card-container'>
-                <div className='pos-icon-card'>
+                <div key={"position_"+element.id} className='pos-card-container'>
+                  <div className='pos-icon-card'>
 
-                    <DashedCircle className='icon-border'/>
-                    <PositionIcon icon_flag={element.attributes.icon_flag} />
-                </div>
+                      <DashedCircle className='icon-border'/>
+                      <PositionIcon icon_flag={element.attributes.icon_flag} />
+                  </div>
 
-                {/* Card Interna */}
-                <div className='int-card'>
-                    {/* Posición */}
-                    <h1>{element.attributes.position_title}</h1>
+                  {/* Card Interna */}
+                  <div className='int-card'>
+                      {/* Posición */}
+                      <h1>{element.attributes.position_title}</h1>
 
-                    {/* Lista De Habilidades */}
-                    <ul>
-                        <li>{element.attributes.position_skill_1}</li>
-                        <li>{element.attributes.position_skill_2}</li>
-                        <li>{element.attributes.position_skill_3}</li>
-                    </ul>
-                </div>
+                      {/* Lista De Habilidades */}
+                      <ul>
+                          <li>{element.attributes.position_skill_1}</li>
+                          <li>{element.attributes.position_skill_2}</li>
+                          <li>{element.attributes.position_skill_3}</li>
+                      </ul>
+                  </div>
             </div>
         )
             

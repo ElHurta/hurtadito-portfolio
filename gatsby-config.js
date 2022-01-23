@@ -45,7 +45,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337/api`,
         queryLimit: 1000, // Defaults to 100
-        collectionTypes: [`position`],
+        collectionTypes: [`position`, `project`],
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

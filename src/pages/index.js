@@ -6,6 +6,7 @@ import "../sass/main.sass"
 
 import { Hero } from "../components/Hero"
 import { Position } from "../components/Position"
+import { Projects } from "../components/Projects"
 
 const IndexPage = () => (
   <React.Fragment>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     </Helmet>
     <Hero />
     <Position/>
+    <Projects/>
   </React.Fragment>
 )
 
