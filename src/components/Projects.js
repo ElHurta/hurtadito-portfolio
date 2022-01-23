@@ -56,7 +56,7 @@ function Projects() {
   })
 
   return (
-    <section>
+    <section id="projects">
       <div className="section_title_container">
         <h1>
           My Projects <IoAnalytics />
