@@ -39,6 +39,8 @@
     overflow-y: auto
 
 .proj_menu_item
+    padding: 0
+
     background: none
     border: none
     outline: 0
@@ -71,13 +73,15 @@
 
 .mi_proj_title
     font-size: 1.3rem
+    font-weight: 600
 
 .mi_proj_type
     font-size: 0.9rem
-
+    font-weight: 400
 
 .project_info
     width: 40%
+    height: 100%
     color: $white
     font-family: "DM Sans"
     padding: 1rem 2rem
@@ -87,7 +91,7 @@
     align-items: center
     justify-content: space-between
     h2, h3
-        margin: 1rem 0
+        margin: 0 0 1rem 0
 
 .project_img
     width: 100px
@@ -95,15 +99,112 @@
 
 .project_des
     font-size: 1.2rem
+    text-align: justify
 
 .project_title
     font-size: 2.5rem
 
 .project_type
     font-size: 1.5rem
+    
 
+.project_see_more
+    color: $base-color
+    margin: 0 0.3rem
 
+@media ( max-width: 1100px)
+    .project_menu
+        width: 35%
 
+    .project_info
+        width: 55%
+
+    .projects_container
+        padding: 0 3rem
+
+    .project_title
+        font-size: 2.3rem
+
+@media ( max-width: 794px)
+    .projects_container
+        padding: 0 2rem
+
+    .project_title
+        font-size: 2rem
+
+    .project_type
+        font-size: 1.2rem
+
+    .project_info
+        padding: 0.5rem 1rem
+
+    .section_title_container h1
+        font-size: 3.5rem
+
+@media ( max-width: 794px)
+    .project_des
+        font-size: 1.1rem
+
+    .project_title
+        font-size: 1.8rem
+
+@media ( max-width: 590px)
+    .section_title_container
+        padding: 0 2rem
+        h1
+            font-size: 3rem
+    
+    .projects_container
+        flex-direction: column
+        margin-top: 2rem
+
+    .project_menu
+        width: 90%
+        flex-direction: row
+        height: 60%
+        padding: 0
+        align-items: center
+    
+    .proj_menu_item
+        margin: 0 1rem
+        flex-direction: column
+        justify-content: space-between
+        height: 70%
+
+        .menu_text
+            width: 13rem
+            text-align: center
+
+    .menu_indicator
+        transform: rotateZ(90deg)
+
+    .project_info
+        overflow-y: auto
+        width: 90%
+
+    .projects_container
+        padding: 0
+
+    .mi_proj_title
+        font-size: 1.1rem
+
+    .mi_proj_type
+        font-size: 0.9rem
+        margin-top: 0.5rem !important
+
+@media ( max-width: 425px)
+    .section_title_container
+        text-align: center
+        h1
+            font-size: 1.5rem
+            justify-content: center
+            
+        p
+            font-size: 1.2rem
+
+    .projects_container
+        flex-direction: column
+        margin-top: 1rem
 
 
 

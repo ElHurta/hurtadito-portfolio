@@ -72,11 +72,13 @@ function Projects() {
               <h2 className="project_title">{projects[0].data[currentProj-1].attributes.project_title}</h2>
               <h3 className="project_type">{projects[0].data[currentProj-1].attributes.project_type}</h3>
             </div>
-            <div className="project_img">|</div>
           </div>
 
           <p className="project_des">
-            {projects[0].data[currentProj-1].attributes.project_description}
+            {
+                projects[0].data[currentProj-1].attributes.project_description.substring(0, 300)+"..."
+            }
+            <a className="project_see_more" href={projects[0].data[currentProj-1].attributes.project_url}>See More</a>
           </p>
         </div>
       </div>
