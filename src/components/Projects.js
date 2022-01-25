@@ -5,6 +5,7 @@ import "../sass/projects.sass"
 import { IoAnalytics } from "@react-icons/all-files/io5/IoAnalytics"
 
 import { useStaticQuery, graphql } from "gatsby"
+import { ProjectDescription } from "./ProjectDescription"
 
 function Projects() {
   const dataQuery = useStaticQuery(graphql`
@@ -55,6 +56,7 @@ function Projects() {
     )
   })
 
+  let currentProjAttr = projects[0].data[currentProj-1].attributes
   return (
     <section id="projects">
       <div className="section_title_container">
@@ -69,17 +71,12 @@ function Projects() {
         <div className="project_info">
           <div className="project_info_header">
             <div>
-              <h2 className="project_title">{projects[0].data[currentProj-1].attributes.project_title}</h2>
-              <h3 className="project_type">{projects[0].data[currentProj-1].attributes.project_type}</h3>
+              <h2 className="project_title">{currentProjAttr.project_title}</h2>
+              <h3 className="project_type">{currentProjAttr.project_type}</h3>
             </div>
           </div>
 
-          <p className="project_des">
-            {
-                projects[0].data[currentProj-1].attributes.project_description.substring(0, 300)+"..."
-            }
-            <a className="project_see_more" href={projects[0].data[currentProj-1].attributes.project_url}>See More</a>
-          </p>
+          <ProjectDescription attributes={currentProjAttr}/>
         </div>
       </div>
     </section>

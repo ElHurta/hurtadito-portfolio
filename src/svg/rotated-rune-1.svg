@@ -1,20 +1,13 @@
 <svg id="Capa_1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 168">
     <defs>
         <style type="text/css">
-            svg{
-                animation: rotation-inverse 50s linear;
-            }
+
             path{
                 stroke: #160327 !important;
                 stroke-width: 5px !important;
                 
             }
-            @keyframes rotation-inverse{
-                from{transform: rotate(359deg);}
-                    
-                to{transform: rotate(0deg);}
-                    
-            }
+
                 
         </style>
     </defs>
