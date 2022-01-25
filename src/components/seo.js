@@ -28,6 +28,8 @@ function Seo({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
+  console.log(site.siteMetadata.title)
+
   return (
     <Helmet
       htmlAttributes={{
@@ -74,6 +76,7 @@ function Seo({ description, lang, meta, title }) {
 }
 
 Seo.defaultProps = {
+  title: null,
   lang: `es`,
   meta: [],
   description: ``,
@@ -83,7 +86,7 @@ Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Seo

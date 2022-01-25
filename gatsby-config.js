@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Juan Hurtado Portfolio`,
+    title: `Juan Hurtado Portfolio 🚀`,
     description: `Juan Hurtado Portfolio.`,
-    author: `@gatsbyjs`,
+    author: `@hurta08`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [

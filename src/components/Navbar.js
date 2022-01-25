@@ -22,8 +22,8 @@ function Navbar() {
                 <li> <a href='#home'> Home </a> </li>
                 <li> <a href='#icando'> Positions </a> </li>
                 <li> <a href='#projects'> Projects </a> </li>
-                <li> <a href='/'> References </a> </li>
-                <li> <a href='/'> Contact </a> </li>
+                <li> <a href='#references'> References </a> </li>
+                <li> <a href='#contact'> Contact </a> </li>
             </ul>
             
         </nav>
