@@ -105,6 +105,17 @@ nav
         font-size: 0.8rem
 
     nav ul li a
-        font-size: 3.5rem
+        font-size: 3rem
+
+@media (max-height: 800px)
+    .hamburger-menu
+        font-size: 2rem
+
+    nav ul
+        &.open
+                clip-path: circle(200vh at 86.5% 4%)
+                -webkit-clip-path: circle(200vh at 86.5% 4%)
+        li a
+            font-size: 1rem
 
         

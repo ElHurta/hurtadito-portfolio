@@ -161,6 +161,9 @@
       padding: 5rem
 
 @media (max-width: 530px)
+    #rune-1, #below-star, #above-star, #dashed-circle-1
+        display: none
+        visibility: hidden
     .welcome-hero 
         padding: 0.5rem 1rem
         h1
@@ -181,3 +184,19 @@
             font-size: 1rem
     .profile-photo
         margin: 6rem
+
+@media (max-height: 800px)
+    #above-star, #below-star, #dashed-circle-1, #rune-1, .photo-container
+        height: 55%
+
+    #dashed-circle-1
+        padding: 1rem
+
+    .welcome-hero 
+        p
+            font-size: 1.3rem
+        h1
+            font-size: 3rem
+            span
+                font-size: 3.2rem
+

@@ -2,18 +2,14 @@
 @import "hero.sass"
 
 
-:root
-    --animation-width: 5vw
-    --hidden-pos: -10vh
-    --semi-visible-pos: -20vh
-    --full-visible-pos: 0vh
-
-$animation-timing: 9s
+$animation-timing: 12s
 $carousel-items: 4
 $animation-delay-fraction: calc($animation-timing / $carousel-items)
 $animation-steps-fraction: calc(100 / $carousel-items)
 $slide-change-timing: 3
 
+:root
+    --animation-limit: 100%
 
 .pos-section-container
     height: 100%
@@ -114,12 +110,12 @@ h1
 
 @keyframes card-carousel-animation
     0%
-        transform: translate(var(--animation-width), 50%) scale(0.8)
+        transform: translate(5vw, calc(var(--animation-limit)/2)) scale(0.8)
         opacity: 0
 
     #{$slide-change-timing}%,
     #{$animation-steps-fraction}%
-        transform: translate(var(--animation-width), 100%) scale(0.8)
+        transform: translate(5vw, var(--animation-limit)) scale(0.8)
         opacity: 0.5
 
     #{$animation-steps-fraction + $slide-change-timing}%,
@@ -129,16 +125,16 @@ h1
 
     #{($animation-steps-fraction * 2) + $slide-change-timing}%,
     #{$animation-steps-fraction * 3}%
-        transform: translate(var(--animation-width), -100%) scale(0.8)
+        transform: translate(5vw, calc(-1*var(--animation-limit))) scale(0.8)
         opacity: 0.5
  
 
     #{($animation-steps-fraction * 3) + $slide-change-timing}%
-        transform: translate(var(--animation-width), 50%) scale(0.8)
+        transform: translate(5vw, calc(var(--animation-limit)/2)) scale(0.8)
         opacity: 0
 
     100%
-        transform: translate(var(--animation-width), 50%) scale(0.8)
+        transform: translate(5vw, calc(var(--animation-limit)/2)) scale(0.8)
         opacity: 0
         visibility: hidden
 
@@ -212,3 +208,23 @@ h1
 
     .pos-card-container
         left: 8%
+
+@media (max-height: 800px)
+    :root
+        --animation-limit: 80%
+    .ican-class h1
+        font-size: 6.2rem
+
+
+@media (max-height: 800px) and ( max-width: 794px)
+    :root
+        --animation-limit: 50%
+
+    .ican-class h1
+        font-size: 4.5rem
+
+    .pos-card-container
+        height: 25%
+        .int-card ul
+            font-size: 0.9rem
+            padding-left: 1.5rem

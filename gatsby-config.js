@@ -3,7 +3,7 @@ module.exports = {
     title: `Juan Hurtado Portfolio 🚀`,
     description: `Juan Hurtado Portfolio.`,
     author: `@hurta08`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://juan-hurtado-portfolio.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-sass`,
