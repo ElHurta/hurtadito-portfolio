@@ -19,6 +19,8 @@
 
         svg
             margin: 0 1rem
+            path
+                stroke: $base-color
 
 .projects_container
     width: 100%
@@ -148,6 +150,22 @@
     .project_title
         font-size: 1.8rem
 
+
+@media (max-height: 800px)
+    .project_title
+        font-size: 2rem
+
+    .project_info
+        overflow-y: auto
+
+    .section_title_container
+        margin-top: 8vh
+        h1
+            font-size: 4rem
+
+    .projects_container
+        margin-top: 2rem
+
 @media ( max-width: 590px)
     .section_title_container
         padding: 0 2rem
@@ -213,20 +231,7 @@
     .project_title
         font-size: 1.5rem
 
-@media (max-height: 800px)
-    .project_title
-        font-size: 2rem
 
-    .project_info
-        overflow-y: auto
-
-    .section_title_container
-        margin-top: 8vh
-        h1
-            font-size: 4rem
-
-    .projects_container
-        margin-top: 2rem
 
     
 
