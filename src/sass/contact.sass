@@ -1,0 +1,119 @@
+@import "main.sass"
+
+
+.contact_container
+    display: flex
+    width: 100%
+    font-family: "DM Sans"
+    justify-content: space-around
+    
+.networks_container
+    width: 45%
+    text-align: center
+
+.networks_container, .message_container
+    width: 45%
+    height: 100%
+    h2
+        color: $base-color
+        font-size: 2.8rem
+
+
+.icons_section
+    color: $base-color
+    font-size: 2.8rem
+    display: flex
+    justify-content: space-evenly
+    width: 72%
+    margin: 0 auto
+
+    a
+        cursor: pointer
+        text-decoration: none
+        transition: color 0.3s
+
+        &:visited, &:link
+            color: $base-color
+        &:hover
+            color: $white
+    
+.contact_form
+    display: flex
+    flex-direction: column
+    text-align: left
+    height: 100%
+    label
+        color: $white
+        font-family: "DM Sans"
+        font-weight: 500
+        font-size: 1.5rem
+
+    input, textarea
+        width: 60%
+        margin: 0.8rem 0rem
+        background-color: rgba(56, 29, 87, 0.5)
+        outline: none
+        border: none
+        color: $white
+        font-size: 1.2rem
+        font-family: "DM Sans"
+        font-weight: 400
+
+    input
+        height: 2.2rem
+        padding: 0 0.8rem
+
+    textarea
+        //height: 10rem
+        padding: 0.8rem
+
+    
+.send_msg_btn
+    width: 20%
+    height: 2rem
+    margin: 0.8rem 0rem
+    outline: none
+    border: none
+    background: rgba(71, 71, 71, 0.692)
+    color: $white
+    font-size: 1rem
+    font-family: "DM Sans"
+    font-size: 500
+    border-radius: 25px
+    transition: background 0.3s
+    cursor: pointer
+
+    &:hover
+        background: rgba(39, 39, 39, 0.692)
+
+
+.contact_form textarea
+    height: 25vh
+
+@media (max-width: 1024px)
+    .send_msg_btn
+        width: 35%
+    
+    .networks_container, .message_container h2
+        color: $base-color
+        font-size: 2.1rem
+
+    .icons_section
+        color: $base-color
+        font-size: 2.1rem
+
+@media (max-width: 660px)
+    .contact_container
+        flex-direction: column
+        align-items: center
+        gap: 1rem
+
+    .networks_container, .message_container
+        width: 90%
+
+@media (max-width: 425px)
+    .contact_form input
+        width: 90%
+        
+    .contact_form textarea
+        width: 90%
